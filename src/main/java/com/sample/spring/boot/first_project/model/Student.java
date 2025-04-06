@@ -2,16 +2,12 @@ package com.sample.spring.boot.first_project.model;
 
 
 import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
 @Entity
-@Getter
-@Setter
+@Data
 @ToString
 @EqualsAndHashCode
 @Table(name = "student", schema = "college")
@@ -21,6 +17,7 @@ public class Student {
 
     @Id
     @Column(name = "student_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name", nullable = false)

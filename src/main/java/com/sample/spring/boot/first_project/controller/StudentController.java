@@ -2,9 +2,8 @@ package com.sample.spring.boot.first_project.controller;
 
 import com.sample.spring.boot.first_project.model.Student;
 import com.sample.spring.boot.first_project.service.StudentService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +21,12 @@ public class StudentController {
     @RequestMapping("/getStudents")
     public List<Student> getStudents() {
         return studentService.getStudents();
+    }
+
+    @PostMapping
+    @RequestMapping("/create")
+    public Student createStudent(@RequestBody Student student) {
+        return studentService.save(student);
     }
 
 }
