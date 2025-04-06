@@ -1,7 +1,6 @@
 package com.sample.spring.boot.first_project.model;
 
 
-import com.sample.spring.boot.first_project.service.StudentID;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

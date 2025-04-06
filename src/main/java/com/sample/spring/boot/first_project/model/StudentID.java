@@ -1,4 +1,4 @@
-package com.sample.spring.boot.first_project.service;
+package com.sample.spring.boot.first_project.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;

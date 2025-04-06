@@ -1,7 +1,7 @@
 package com.sample.spring.boot.first_project.repository;
 
 import com.sample.spring.boot.first_project.model.Student;
-import com.sample.spring.boot.first_project.service.StudentID;
+import com.sample.spring.boot.first_project.model.StudentID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

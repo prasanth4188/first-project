@@ -1,0 +1,16 @@
+spring:
+  application:
+  name: first-project
+
+  datasource:
+    url: jdbc:postgresql://192.168.1.100:5432/postgres?currentSchema=college
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  # Hibernate (JPA) Configuration
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
