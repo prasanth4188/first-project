@@ -4,12 +4,14 @@ import com.sample.spring.boot.first_project.StudentAlreadyException;
 import com.sample.spring.boot.first_project.model.Student;
 import com.sample.spring.boot.first_project.model.StudentID;
 import com.sample.spring.boot.first_project.repository.StudentRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class StudentService {
 
     private final StudentRepository studentRepository;
@@ -19,6 +21,7 @@ public class StudentService {
     }
 
     public List<Student> getStudents() {
+        log.info("get Students service class in invoked");
         return studentRepository.findAll();
     }
 
